@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Auriculares Gamer",
+    "precio": 45000,
+    "categoria": "Periféricos",
+    "stock": 12,
+    "descripcion": "Auriculares con sonido envolvente y micrófono.",
+    "imagen": "https://tiendadiggit.com.ar/web/image/product.template/261005/image_512/[981-000863]%20Auriculares%20Gamer%20Logitech%20G733%20Lightsync%20RGB%20Inal%C3%A1mbrico?unique=76e1c11"
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico",
+    "precio": 68000,
+    "categoria": "Periféricos",
+    "stock": 7,
+    "descripcion": "Teclado mecánico RGB con switches blue.",
+    "imagen": "https://m.media-amazon.com/images/I/41+Pt1qczGL.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Mouse Inalámbrico",
+    "precio": 32000,
+    "categoria": "Periféricos",
+    "stock": 15,
+    "descripcion": "Mouse ergonómico inalámbrico recargable.",
+    "imagen": "https://http2.mlstatic.com/D_Q_NP_2X_900121-MLA99460176746_112025-E.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor 24 pulgadas",
+    "precio": 210000,
+    "categoria": "Monitores",
+    "stock": 4,
+    "descripcion": "Monitor Full HD de 24 pulgadas y 144Hz.",
+    "imagen": "https://m.media-amazon.com/images/I/61Jf5hLnJJL.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Notebook Gamer",
+    "precio": 1250000,
+    "categoria": "Computadoras",
+    "stock": 3,
+    "descripcion": "Notebook con procesador Ryzen 7 y RTX 4060.",
+    "imagen": "https://tiendadiggit.com.ar/web/image/product.template/272745/image_512/[FX507VV-LP142W]%20Notebook%20Gamer%20Asus%20TUF%20Gaming%20F15%2013th%20Gen%20Intel%C2%AE%20Core%E2%84%A2%20i7-13620H%20Processor%20144Hz%2016GB%201TB%20FX507?unique=bffb8f0"
+  },
+  {
+    "id": 6,
+    "nombre": "Parlante Bluetooth",
+    "precio": 54000,
+    "categoria": "Audio",
+    "stock": 10,
+    "descripcion": "Parlante portátil resistente al agua.",
+    "imagen": "https://casadelaudio.com/media/catalog/product/0/3/031-jbl-092_2_.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400"
+  },
+  {
+    "id": 7,
+    "nombre": "Webcam HD",
+    "precio": 39000,
+    "categoria": "Streaming",
+    "stock": 9,
+    "descripcion": "Webcam HD ideal para videollamadas y streaming.",
+    "imagen": "https://http2.mlstatic.com/D_Q_NP_2X_840085-MLA89007664662_082025-V.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Silla Gamer",
+    "precio": 185000,
+    "categoria": "Muebles",
+    "stock": 5,
+    "descripcion": "Silla ergonómica reclinable con almohadones.",
+    "imagen": "https://www.megatone.net/images/Articulos/349/183/TK/zoom/MKT03TKITB-1.webp?version=35"
+  }
+]
