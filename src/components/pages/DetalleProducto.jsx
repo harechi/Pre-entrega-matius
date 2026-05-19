@@ -19,7 +19,21 @@ const ProductoDetalle = () => {
       });
 
   }, [id]);
+  
+  const [cantidad, setCantidad] = useState(1);
 
+  const sumar = () => {
+    if (cantidad < producto.stock) {
+      setCantidad(cantidad + 1);
+    }
+  };
+
+  const restar = () => {
+    if (cantidad > 0) {
+      setCantidad(cantidad - 1);
+    }
+  };
+  
  if (!producto) {
     return <p>Cargando...</p>;
   }
@@ -38,7 +52,8 @@ const ProductoDetalle = () => {
       <p>{producto.descripcion}</p>
 
       <p>${producto.precio}</p>
-
+      
+      
     </div>
   );
 };

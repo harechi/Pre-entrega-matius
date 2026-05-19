@@ -62,11 +62,13 @@
 
 .price {
   margin-top: 10px;
+  margin-bottom: 0px;
 
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: lighter;
 
   color: #00a650;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .controls {
@@ -102,7 +104,7 @@
 
   border: none;
 
-  background-color: #00a650;
+  background-color: #3ed0f8;
 
   color: white;
 
@@ -115,7 +117,7 @@
 }
 
 .cartButton:hover {
-  background-color: #008f45;
+  background-color: #b7e1ff;
 }
 
 .cartButton:disabled {
@@ -133,7 +135,7 @@
 
   border: none;
 
-  background-color: #6fc3ff;
+  background-color: #008f45;
 
   color: white;
 

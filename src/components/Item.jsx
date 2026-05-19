@@ -8,29 +8,24 @@ const Item = ({ producto }) => {
 
   const { agregarAlCarrito } = useContext(CartContext);
 
-  const [cantidad, setCantidad] = useState(0);
 
-  const sumar = () => {
-    if (cantidad < producto.stock) {
-      setCantidad(cantidad + 1);
-    }
-  };
+  // const sumar = () => {
+  //   if (cantidad < producto.stock) {
+  //     setCantidad(cantidad + 1);
+  //   }
+  // };
 
-  const restar = () => {
-    if (cantidad > 0) {
-      setCantidad(cantidad - 1);
-    }
-  };
+  // const restar = () => {
+  //   if (cantidad > 0) {
+  //     setCantidad(cantidad - 1);
+  //   }
+  // };
   
   const [agregado, setAgregado] = useState(false);
 
   const handleAgregar = () => {
-
-  if (cantidad <= 0) return;
-
-  agregarAlCarrito(producto, cantidad);
-
-  setAgregado(true);
+    agregarAlCarrito(producto);
+    setAgregado(true);
   };
 
   return (
@@ -56,22 +51,14 @@ const Item = ({ producto }) => {
 
           <p>{producto.descripcion}</p>
 
+          <p className={styles.stock} >{producto.stock}</p>
+
           <p className={styles.price}>
             ${producto.precio}
           </p>
 
         </div>
       </Link>
-
-      <div className={styles.controls}>
-
-        <button onClick={restar}>-</button>
-
-        <span>{cantidad}</span>
-
-        <button onClick={sumar}>+</button>
-
-      </div>
 
       <button
         className={
@@ -82,7 +69,7 @@ const Item = ({ producto }) => {
 
         onClick={handleAgregar}
 
-        disabled={agregado || cantidad === 0}
+        disabled={agregado === true}
       >{
         agregado
         ? "Agregado"

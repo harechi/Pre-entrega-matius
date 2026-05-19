@@ -27,13 +27,7 @@ export const CartProvider = ({ children }) => {
 
     } else {
 
-      setCarrito([
-        ...carrito,
-        {
-          ...producto,
-          cantidad
-        }
-      ]);
+      setCarrito(prev => [...prev, { ...producto, cantidad} ]);
 
     }
   };

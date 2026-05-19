@@ -9,7 +9,7 @@ const Carrito = () => {
   const { carrito } = useContext(CartContext);
 
   const total = carrito.reduce(
-    (acc, item) => acc + item.precio * item.cantidad,
+    (acc, item) => acc + item.precio, //* item.cantidad,
     0
   );
 
@@ -57,7 +57,7 @@ const Carrito = () => {
                     <p className={styles.price}>
                       $
                       {
-                        item.precio * item.cantidad
+                        item.precio //* item.cantidad
                       }
                     </p>
 

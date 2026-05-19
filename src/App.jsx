@@ -8,7 +8,6 @@ import Carrito from "./components/pages/Carrito";
 
 function App() {
   return (
-    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,7 +16,6 @@ function App() {
           <Route path="/carrito" element={<Carrito />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
   );
 }
 
