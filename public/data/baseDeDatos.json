@@ -1,74 +1,272 @@
 [
   {
     "id": 1,
-    "nombre": "Auriculares Gamer",
-    "precio": 45000,
-    "categoria": "Periféricos",
-    "stock": 12,
-    "descripcion": "Auriculares con sonido envolvente y micrófono.",
-    "imagen": "https://tiendadiggit.com.ar/web/image/product.template/261005/image_512/[981-000863]%20Auriculares%20Gamer%20Logitech%20G733%20Lightsync%20RGB%20Inal%C3%A1mbrico?unique=76e1c11"
+    "nombre": "React-Cola",
+    "precio": 5000,
+    "categoria": "refrescos",
+    "stock": 120,
+    "descripcion": "Reactívate con React-Cola, la bebida oficial de los desarrolladores. Con su sabor único y refrescante, es la elección perfecta para mantener tu energía mientras codificas. ¡Disfruta de cada sorbo y sigue creando increíbles aplicaciones con React-Cola!",
+    "imagen": "https://ibb.co/TxGMDjzs"
   },
   {
     "id": 2,
-    "nombre": "Teclado Mecánico",
-    "precio": 68000,
-    "categoria": "Periféricos",
-    "stock": 7,
-    "descripcion": "Teclado mecánico RGB con switches blue.",
-    "imagen": "https://m.media-amazon.com/images/I/41+Pt1qczGL.jpg"
+    "nombre": "Powerade 2.5lts",
+    "precio": 4000,
+    "categoria": "refrescos",
+    "stock": 34,
+    "descripcion": "Powerade 2.5 litros, la bebida isotónica perfecta para rehidratar después del ejercicio.",
+    "imagen": "https://ibb.co/Mx8wdNQG"
   },
   {
     "id": 3,
-    "nombre": "Mouse Inalámbrico",
-    "precio": 32000,
-    "categoria": "Periféricos",
-    "stock": 15,
-    "descripcion": "Mouse ergonómico inalámbrico recargable.",
-    "imagen": "https://http2.mlstatic.com/D_Q_NP_2X_900121-MLA99460176746_112025-E.webp"
+    "nombre": "Gatorade 750ml",
+    "precio": 4200,
+    "categoria": "refrescos",
+    "stock": 85,
+    "descripcion": "Gatorade 750 ml, la bebida isotónica perfecta para rehidratar después del ejercicio.",
+    "imagen": "https://ibb.co/39vs6hCR"
   },
   {
     "id": 4,
-    "nombre": "Monitor 24 pulgadas",
-    "precio": 210000,
-    "categoria": "Monitores",
+    "nombre": "Pepsi lata 250ml",
+    "precio": 2100,
+    "categoria": "refrescos",
     "stock": 4,
-    "descripcion": "Monitor Full HD de 24 pulgadas y 144Hz.",
-    "imagen": "https://m.media-amazon.com/images/I/61Jf5hLnJJL.jpg"
+    "descripcion": "Pepsi lata 250ml, la bebida refrescante perfecta para cualquier ocasión.",
+    "imagen": "https://ibb.co/B2ST04w2"
   },
   {
     "id": 5,
-    "nombre": "Notebook Gamer",
-    "precio": 1250000,
-    "categoria": "Computadoras",
-    "stock": 3,
-    "descripcion": "Notebook con procesador Ryzen 7 y RTX 4060.",
-    "imagen": "https://tiendadiggit.com.ar/web/image/product.template/272745/image_512/[FX507VV-LP142W]%20Notebook%20Gamer%20Asus%20TUF%20Gaming%20F15%2013th%20Gen%20Intel%C2%AE%20Core%E2%84%A2%20i7-13620H%20Processor%20144Hz%2016GB%201TB%20FX507?unique=bffb8f0"
+    "nombre": "Manaos Lata 250ml",
+    "precio": 1250,
+    "categoria": "refrescos",
+    "stock": 33,
+    "descripcion": "Manaos lata 250ml, la bebida refrescante perfecta para cualquier ocasión.",
+    "imagen": "https://ibb.co/2YHBnZBw"
   },
   {
     "id": 6,
-    "nombre": "Parlante Bluetooth",
-    "precio": 54000,
-    "categoria": "Audio",
-    "stock": 10,
-    "descripcion": "Parlante portátil resistente al agua.",
-    "imagen": "https://casadelaudio.com/media/catalog/product/0/3/031-jbl-092_2_.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400"
+    "nombre": "Pepsi zero azucar sabor lima lata 330ml",
+    "precio": 4000,
+    "categoria": "refrescos",
+    "stock": 40,
+    "descripcion": "Pepsi zero, sabor lima, la bebida refrescante perfecta para cualquier ocasión.",
+    "imagen": "https://ibb.co/TDN33nb3"
   },
   {
     "id": 7,
-    "nombre": "Webcam HD",
-    "precio": 39000,
-    "categoria": "Streaming",
-    "stock": 9,
-    "descripcion": "Webcam HD ideal para videollamadas y streaming.",
-    "imagen": "https://http2.mlstatic.com/D_Q_NP_2X_840085-MLA89007664662_082025-V.webp"
+    "nombre": "Sprite 1 litro",
+    "precio": 3200,
+    "categoria": "refrescos",
+    "stock": 90,
+    "descripcion": "Sprite 1 litro, la bebida refrescante que te acompaña en la mesa.",
+    "imagen": "https://ibb.co/3mY7dmDN"
   },
   {
     "id": 8,
-    "nombre": "Silla Gamer",
+    "nombre": "Coca cola, sabor original",
+    "precio": 3000,
+    "categoria": "refrescos",
+    "stock": 30,
+    "descripcion": "Coca cola, sabor original, la bebida refrescante que te acompaña en la mesa.",
+    "imagen": "https://ibb.co/kscQBjg9"
+  },
+    {
+    "id": 9,
+    "nombre": "Fanta limon lata 250ml",
+    "precio": 2700,
+    "categoria": "refrescos",
+    "stock": 50,
+    "descripcion": "Fanta limon lata 250ml, la bebida refrescante perfecta para cualquier ocasión.",
+    "imagen": "https://ibb.co/MkCkxHMq"
+  },
+    {
+    "id": 10,
+    "nombre": "Fanta lata 250ml",
+    "precio": 2700,
+    "categoria": "refrescos",
+    "stock": 50,
+    "descripcion": "Fanta lata 250ml, la bebida refrescante perfecta para cualquier ocasión.",
+    "imagen": "https://ibb.co/3Y5sMM59"
+  },
+    {
+    "id": 11,
+    "nombre": "Joaco Rabbane",
     "precio": 185000,
-    "categoria": "Muebles",
+    "categoria": "perfumes",
+    "stock": 12,
+    "descripcion": "Joaco Rabbane, el perfume que te hará sentir como un verdadero caballero con su aroma sofisticado y elegante. Con notas de madera, especias y un toque de frescura, este perfume es perfecto para cualquier ocasión. ¡Déjate seducir por el encanto de Joaco Rabbane y conquista el mundo con tu presencia!",
+    "imagen": "https://ibb.co/mVVrmH3R"
+  },
+    {
+    "id": 12,
+    "nombre": "Le male Black",
+    "precio": 185000,
+    "categoria": "perfumes",
     "stock": 5,
-    "descripcion": "Silla ergonómica reclinable con almohadones.",
-    "imagen": "https://www.megatone.net/images/Articulos/349/183/TK/zoom/MKT03TKITB-1.webp?version=35"
+    "descripcion": "Le male black, un perfume con aroma a negro",
+    "imagen": "https://ibb.co/FkXKgk0L"
+  },
+    {
+    "id": 13,
+    "nombre": "Le male gold",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "Le male gold, un perfume con aroma a oro",
+    "imagen": "https://ibb.co/35cZJ69L"
+  },
+    {
+    "id": 14,
+    "nombre": "Le male Acuatic",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "Le male acuatic, un perfume con aroma a baño",
+    "imagen": "https://ibb.co/qGyZ2Kc"
+  },
+    {
+    "id": 15,
+    "nombre": "Le male Adán",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "Le male adán, un perfume con aroma a paraíso",
+    "imagen": "https://ibb.co/pcbdV1j"
+  },
+    {
+    "id": 16,
+    "nombre": "invictus",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "invictus, un perfume para hombres victoriosos",
+    "imagen": "https://ibb.co/mryRT5hP"
+  },
+    {
+    "id": 17,
+    "nombre": "Essencial, siete palabras",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "Essencial, siete palabras, un perfume para guerreros saiyajin",
+    "imagen": "https://ibb.co/tMmFhjTX"
+  },
+    {
+    "id": 18,
+    "nombre": "adidas full recharge",
+    "precio": 185000,
+    "categoria": "perfumes",
+    "stock": 5,
+    "descripcion": "adidas full recharge, un perfume para recargar confianza",
+    "imagen": "https://ibb.co/C3mKj5TM"
+  },
+    {
+    "id": 19,
+    "nombre": "Perfume del Rayo macuin",
+    "precio": 1950000,
+    "categoria": "perfumes",
+    "stock": 1,
+    "descripcion": "Perfume del Rayo macuin, el perfume de los campeones",
+    "imagen": "https://ibb.co/1t8QvZjk"
+  },
+      {
+    "id": 20,
+    "nombre": "Perfume de Ben 10",
+    "precio": 1500000,
+    "categoria": "perfumes",
+    "stock": 1,
+    "descripcion": "Perfume de Ben 10, el perfume de los héroes",
+    "imagen": "https://ibb.co/fVd1WVRG"
+  },
+  {
+    "id": 21,
+    "nombre": "Banda Elástica Fitness",
+    "precio": 6500,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Banda elástica de resistencia para entrenamiento funcional.",
+    "imagen": "https://ibb.co/TxZVTRK5"
+  },
+  {
+    "id": 22,
+    "nombre": "Mancuernas 20 Kg",
+    "precio": 85000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Par de mancuernas de 20 kg para entrenamiento de fuerza.",
+    "imagen": "https://ibb.co/ccKTTxPy"
+  },
+  {
+    "id": 23,
+    "nombre": "Mancuerna Ajustable",
+    "precio": 120000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Mancuerna regulable con múltiples niveles de peso.",
+    "imagen": "https://ibb.co/Gvh3ZBMV"
+  },
+  {
+    "id": 24,
+    "nombre": "Set de Pesas",
+    "precio": 70000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Kit de discos y barras para entrenamiento en casa.",
+    "imagen": "https://ibb.co/d09Mwbx0"
+  },
+  {
+    "id": 25,
+    "nombre": "Banco Plano",
+    "precio": 95000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Banco para ejercicios de fuerza y press de pecho.",
+    "imagen": "https://ibb.co/fYHM87jM"
+  },
+  {
+    "id": 26,
+    "nombre": "Banco Multiangular",
+    "precio": 135000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Banco ajustable con múltiples inclinaciones.",
+    "imagen": "https://ibb.co/LDrfZ6fm"
+  },
+  {
+    "id": 27,
+    "nombre": "Cinta Caminadora",
+    "precio": 420000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Cinta para caminar y correr con panel digital.",
+    "imagen": "https://ibb.co/kVH1dmyG"
+  },
+  {
+    "id": 28,
+    "nombre": "Soga de Saltar",
+    "precio": 12000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Soga de velocidad para entrenamiento cardiovascular.",
+    "imagen": "https://ibb.co/HwrvG71"
+  },
+  {
+    "id": 29,
+    "nombre": "Rueda Abdominal",
+    "precio": 18000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Rueda para fortalecer abdomen y zona media.",
+    "imagen": "https://ibb.co/F42311df"
+  },
+  {
+    "id": 30,
+    "nombre": "Hand Grip Regulable",
+    "precio": 9000,
+    "categoria": "ejercicio",
+    "stock": 1,
+    "descripcion": "Ejercitador de mano con resistencia ajustable.",
+    "imagen": "https://ibb.co/WpK7H3b7"
   }
 ]

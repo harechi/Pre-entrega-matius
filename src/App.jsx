@@ -4,16 +4,17 @@ import Layout from "./components/layout/Layout";
 import Home from "./components/pages/Home";
 import Productos from "./components/pages/Products";
 import ProductoDetalle from "./components/pages/DetalleProducto";
-import Carrito from "./components/pages/Carrito";
+import Cart from "./components/pages/Cart";
 
 function App() {
   return (
+  
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/producto/:id" element={<ProductoDetalle />} />
-          <Route path="/carrito" element={<Carrito />} />
+          <Route path="/carrito" element={<Cart />} />
         </Routes>
       </Layout>
   );

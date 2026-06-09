@@ -37,22 +37,38 @@
   padding: 15px;
 
   flex-grow: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .category {
   color: gray;
   font-size: 0.9rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .title {
   margin: 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .description {
-  color: #555;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   margin-bottom: 12px;
+
+  color:#0000008b;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+  line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 .stock {
@@ -61,13 +77,13 @@
 }
 
 .price {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 0px;
 
   font-size: 1rem;
   font-weight: lighter;
 
-  color: #00a650;
+  color: #007438;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -146,3 +162,4 @@
 
   margin-top: auto;
 }
+

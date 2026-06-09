@@ -6,26 +6,13 @@ import styles from "../styles/item.module.css";
 
 const Item = ({ producto }) => {
 
-  const { agregarAlCarrito } = useContext(CartContext);
-
-
-  // const sumar = () => {
-  //   if (cantidad < producto.stock) {
-  //     setCantidad(cantidad + 1);
-  //   }
-  // };
-
-  // const restar = () => {
-  //   if (cantidad > 0) {
-  //     setCantidad(cantidad - 1);
-  //   }
-  // };
+  const { addToCart } = useContext(CartContext);
   
-  const [agregado, setAgregado] = useState(false);
+  const [agregado, setAdd] = useState(false);
 
   const handleAgregar = () => {
-    agregarAlCarrito(producto);
-    setAgregado(true);
+    addToCart(producto, 1)
+    setAdd(true);
   };
 
   return (
@@ -49,7 +36,9 @@ const Item = ({ producto }) => {
 
           <h3>{producto.nombre}</h3>
 
-          <p>{producto.descripcion}</p>
+          <p className={styles.description}>
+            {producto.descripcion}
+          </p>
 
           <p className={styles.stock} >{producto.stock}</p>
 

@@ -115,3 +115,28 @@
 .buyButton:hover {
   background-color: #2968c8;
 }
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantityButton {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+
+.quantityValue {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

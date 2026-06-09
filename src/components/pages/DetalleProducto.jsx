@@ -1,26 +1,52 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const ProductoDetalle = () => {
-  const {id} = useParams()
+import styles from "./detalleProducto.module.css";
+
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
+
+const DetalleProducto = () => {
+
+  const { id } = useParams();
+
+  const { addToCart } = useContext(CartContext);
+    
+  const [agregado, setAdd] = useState(false);
+  
+
   const [producto, setProducto] = useState(null);
 
-    useEffect(() => {
+  useEffect(() => {
 
-    fetch("/data/baseDeDatos.json")
-      .then(res => res.json())
-      .then(data => {
+    const getProduct = async () => {
 
-        const productoEncontrado = data.find(
-          prod => prod.id == id
-        );
+      const docRef = doc(db, "productos", id);
 
-        setProducto(productoEncontrado);
-      });
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+
+        setProducto({
+          id: docSnap.id,
+          ...docSnap.data()
+        });
+
+      }
+
+    };
+
+    getProduct();
 
   }, [id]);
-  
+
   const [cantidad, setCantidad] = useState(1);
+
+  if (!producto) {
+    return <p>Cargando...</p>;
+  }
 
   const sumar = () => {
     if (cantidad < producto.stock) {
@@ -29,14 +55,15 @@ const ProductoDetalle = () => {
   };
 
   const restar = () => {
-    if (cantidad > 0) {
+    if (cantidad > 1) {
       setCantidad(cantidad - 1);
     }
   };
-  
- if (!producto) {
-    return <p>Cargando...</p>;
-  }
+
+    const handleAgregar = () => {
+    addToCart(producto, cantidad)
+    setAdd(true);
+  };
 
   return (
     <div>
@@ -52,10 +79,21 @@ const ProductoDetalle = () => {
       <p>{producto.descripcion}</p>
 
       <p>${producto.precio}</p>
-      
-      
+
+      <p>Stock: {producto.stock}</p>
+
+      <button onClick={restar}>-</button>
+
+      <span>{cantidad}</span>
+
+      <button onClick={sumar}>+</button>
+
+      <button onClick={handleAgregar} disabled={agregado}>
+        {agregado ? "Agregado" : "Agregar al carrito"}
+      </button>
+
     </div>
   );
 };
 
-export default ProductoDetalle;
+export default DetalleProducto;
