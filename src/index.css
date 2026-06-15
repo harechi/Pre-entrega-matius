@@ -2,4 +2,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(
+  to bottom,
+  #000f22,
+  #4ea5ff,
+  white
+);
 }

@@ -44,6 +44,20 @@ const Carrusel = () => {
     );
   };
 
+  const prev =
+  slides.length > 0
+    ? (current === 0
+        ? slides.length - 1
+        : current - 1)
+    : 0;
+
+  const next =
+  slides.length > 0
+    ? (current === slides.length - 1
+        ? 0
+        : current + 1)
+    : 0;
+
   useEffect(() => {
 
     if (slides.length === 0) return;
@@ -63,54 +77,49 @@ const Carrusel = () => {
   }, [slides, current]);
 
   return (
+    <>
+      <div className={styles.carouselWrapper}>
 
-    <div className={styles.carousel}>
-
-      <button
-        className={styles.leftArrow}
-        onClick={prevSlide}
-        >
-         ❮
-      </button>
-
-      {slides.length > 0 && (
-
-       <div className={styles.carousel}>
-
-  <div
-    className={styles.track}
-    style={{
-      transform: `translateX(-${current * 100}%)`
-    }}
+  <button
+    className={styles.leftArrow}
+    onClick={prevSlide}
   >
+    ❮
+  </button>
 
-    {slides.map(slide => (
-      <img
-        key={slide.id}
-        src={slide.imagen}
-        alt={slide.titulo}
-      />
-    ))}
+   <div className={styles.carousel}>
+        {slides.map((slide, index) => {
 
-  </div>
-          
-           <button className={styles.rightArrow}
-              onClick={() =>
-                setCurrent(
-                  current === slides.length - 1
-                    ? 0
-                    : current + 1
-                )
-              } 
-            >
-             ❯
-           </button>
-        </div>
-        )
-      }
+          let className = styles.hidden;
 
-    </div>
+          if (index === current)
+            className = styles.active;
 
+          else if (index === prev)
+            className = styles.prev;
+
+          else if (index === next)
+            className = styles.next;
+
+          return (
+            <img
+              key={slide.id}
+              src={slide.imagen}
+              className={className}
+            />
+          );
+        })}
+      </div>
+
+  <button
+    className={styles.rightArrow}
+    onClick={nextSlide}
+  >
+    ❯
+  </button>
+
+</div>
+    </>
   );
 };
 

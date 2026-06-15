@@ -2,7 +2,6 @@ import styles from "../../styles/footer.module.css"
 const Footer = () => {
   return (
     <footer>
-      <p>© 2026 NovaMarket - Todos los derechos reservados</p>
 
       <div className={styles.cards}>
         <div className={styles.card}>
@@ -20,6 +19,7 @@ const Footer = () => {
           <p>UX/UI Designer</p>
         </div>
       </div>
+      <p className={styles.company} >© 2026 NovaMarket - Todos los derechos reservados</p>
     </footer>
   );
 };

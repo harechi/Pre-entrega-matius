@@ -14,16 +14,29 @@ const Cart = () => {
   );
 
   const incQuantity = (id) => {
-    const newCart = cart.map(item =>
-      item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
-    );
-    setCart(newCart);
-  };
+
+  const newCart = cart.map(item =>
+
+    item.id === id
+      ? {
+          ...item,
+          cantidad:
+            item.cantidad < item.stock
+              ? item.cantidad + 1
+              : item.cantidad
+        }
+      : item
+
+  );
+
+  setCart(newCart);
+};
 
   const decQuantity = (id) => {
     const newCart = cart.map(item =>
       item.id === id ? { ...item, cantidad: Math.max(item.cantidad - 1, 1) } : item
     );
+      setCart(newCart);
 
   };
     const removeItem = (id) => {

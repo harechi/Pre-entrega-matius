@@ -1,24 +1,31 @@
 .footer {
-  background-color: #1e1e1e;
   color: white;
   padding: 30px 20px;
   margin-top: 40px;
+  width: 100%;
 }
 
 .company {
   text-align: center;
   margin-bottom: 20px;
+  color: #000c89;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande ', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10px;
+  font-weight: lighter;
 }
 
 .cards {
+  margin-top: 90px;
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  color: #000c89;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande ', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
 }
 
 .card {
-  background-color: #2c2c2c;
+
   padding: 15px;
   border-radius: 10px;
   width: 200px;
