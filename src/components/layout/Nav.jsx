@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "../../styles/nav.module.css"
+import Categorias from "../pages/Categorias";
+
 
 const Nav = ({ scrolled }) => {
   return (
@@ -10,9 +12,10 @@ const Nav = ({ scrolled }) => {
       <Link to="/productos" className={scrolled ? styles.scrolled : styles.link}>
         Productos
       </Link>
-      <Link to="/carrito" className={scrolled ? styles.scrolled : styles.link}>
-        Carrito
-      </Link>
+
+      <button to="/Categorias" className={scrolled ? styles.scrolledCateg : styles.button}>
+        <Categorias scrolled={scrolled}  />
+      </button>
     </nav>
   );
 };

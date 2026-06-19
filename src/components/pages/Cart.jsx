@@ -2,6 +2,8 @@ import { useContext } from "react";
 
 import { CartContext } from "../../context/CartContext";
 
+import PapeleraIcon from "../../assets/icons/PapeleraIcon"
+
 import styles from "./cart.module.css";
 
 const Cart = () => {
@@ -118,7 +120,7 @@ const Cart = () => {
                     className={styles.removeButton}
                     onClick={() => removeItem(item.id)}
                   >
-                    Eliminar
+                    <PapeleraIcon className={styles.iconPapelera} />
                   </button>
 
                 </div>

@@ -8,8 +8,9 @@
   padding: 20px;
 }
 
-.link a:hover {
-  color: #ffffff;
+.link:hover {
+  transition: 0.2s;
+  opacity: 50%;
 }
 
 
@@ -24,4 +25,32 @@
 
 .scrolled a:hover {
   color: #01063a;
+}
+
+.scrolled:hover {
+  transition: 0.2s;
+  opacity: 50%;
+}
+
+
+
+.scrolledCateg {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+  position: relative;
+  background: transparent;
+  border: none;
+}
+ 
+@media (max-width: 600px) {
+  .link {
+    padding: 10px;
+    margin-bottom: 0px;
+    font-size: 12px;
+  };
 }

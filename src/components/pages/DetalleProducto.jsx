@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+
+import Cruz from "../../assets/icons/Cruz"
 
 import styles from "./detalleProducto.module.css";
 
@@ -65,35 +67,72 @@ const DetalleProducto = () => {
     setAdd(true);
   };
 
-  return (
-    <div>
+return (
+  <div className={styles.detalleContainer}>
 
-      <h2>{producto.nombre}</h2>
+    <Link to="/productos" className={styles.cruz}>
+      <Cruz />
+    </Link>
+    
 
+    <div className={styles.imagenContainer}>
       <img
         src={producto.imagen}
         alt={producto.nombre}
-        width="300"
       />
+    </div>
 
-      <p>{producto.descripcion}</p>
+    <div className={styles.infoContainer}>
 
-      <p>${producto.precio}</p>
+      <h1>{producto.nombre}</h1>
 
-      <p>Stock: {producto.stock}</p>
+      <p className={styles.precio}>
+        ${producto.precio}
+      </p>
 
-      <button onClick={restar}>-</button>
+      <p className={styles.descripcion}>
+        {producto.descripcion}
+      </p>
 
-      <span>{cantidad}</span>
+      <p className={styles.stock}>
+        Stock: {producto.stock}
+      </p>
 
-      <button onClick={sumar}>+</button>
+      <div className={styles.controles}>
 
-      <button onClick={handleAgregar} disabled={agregado}>
-        {agregado ? "Agregado" : "Agregar al carrito"}
-      </button>
+        <button
+          className={styles.cantidadBtn}
+          onClick={restar}
+        >
+          -
+        </button>
+
+        <span className={styles.cantidad}>
+          {cantidad}
+        </span>
+
+        <button
+          className={styles.cantidadBtn}
+          onClick={sumar}
+        >
+          +
+        </button>
+
+        <button
+          className={styles.botonCarrito}
+          onClick={handleAgregar}
+          disabled={agregado}
+        >
+          {agregado ? "Agregado" : "Agregar al carrito"}
+        </button>
+
+
+      </div>
 
     </div>
-  );
+
+  </div>
+);
 };
 
 export default DetalleProducto;

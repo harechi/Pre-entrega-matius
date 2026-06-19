@@ -10,7 +10,7 @@
 
   overflow: hidden;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.09);
 
   transition: 0.2s;
 
@@ -31,6 +31,7 @@
   height: 220px;
 
   object-fit: cover;
+  filter: brightness(0.95)
 }
 
 .info {
@@ -49,6 +50,11 @@
 .title {
   margin: 10px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+  color: #2d2d2d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description {
@@ -72,51 +78,41 @@
 }
 
 .stock {
+  display: inline-block;
   font-size: 0.9rem;
-  color: #666;
+  color: #ffffff;
+  background-color: #00ca62;
+  margin-bottom: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.stockBajo {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background-color: #ff0404;
+  margin-bottom: 10px;
+  padding: 4px 8px;
+  border-radius: 2px;
 }
 
 .price {
   margin-top: 0px;
   margin-bottom: 0px;
 
-  font-size: 1rem;
-  font-weight: lighter;
+  font-size: 20px;
+  font-weight: bolder;
 
-  color: #007438;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #434343;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.controls {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  gap: 15px;
-
-  margin-bottom: 15px;
-}
-
-.controls button {
-  width: 30px;
-  height: 30px;
-
-  border: none;
-
-  background-color: #008cff;
-
-  color: white;
-
-  border-radius: 5px;
-
-  cursor: pointer;
-}
 
 .cartButton {
   width: 100%;
 
-  padding: 15px;
+  padding: 10px;
 
   border: none;
 
@@ -129,7 +125,7 @@
 
   cursor: pointer;
 
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .cartButton:hover {
@@ -163,3 +159,57 @@
   margin-top: auto;
 }
 
+.iconoBoton {
+  display: none;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .description {
+    display: none;
+  }
+  .category {
+    display: none;
+  }
+
+  .card {
+    border-radius: 3px;
+  }
+
+  .card:hover {
+  transform: scale(1.01);
+  }
+
+  .textoBoton {
+    display: none;
+  }
+
+
+  .iconoBoton {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #000000;
+    margin-left: 0;
+    
+  }
+  
+  .cartButton {
+    background: none;
+  }
+
+  .cartButton:hover {
+    background: none;
+  }
+  .addedButton {
+    display: none;
+  }
+
+  .containerPrecio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+}

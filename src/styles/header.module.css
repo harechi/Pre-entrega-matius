@@ -17,7 +17,7 @@
 
   gap: 2rem;
 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  
 
   transition: color 0.3s ease, background 0.3s ease;
 }
@@ -29,6 +29,40 @@
 
   color: #000c89;
 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.iconScrolled{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #000c89;
+  text-decoration: none;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.iconScrolled:hover {
+  transition: 0.2s;
+  opacity: 50%;
+}
+
+.link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.link:hover {
+  transition: 0.2s;
+  opacity: 50%;
 }
 
 .title {
@@ -42,4 +76,45 @@
   display: flex;
 
   gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .header {
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+
+  padding: 0px;
+
+  align-items: center;
+  display: flex;
+
+  gap: 2rem;
+
+  
+  }
+
+  .title {
+  margin: 15px;
+  font-size: 20px;
+  }
+
+  .link {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  padding-right: 20px;
+  }
+  
+  .iconScrolled{
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    padding-right: 20px;
+  }
+
 }
