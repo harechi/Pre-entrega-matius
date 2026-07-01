@@ -1,0 +1,197 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  box-sizing: border-box;
+
+  background: transparent;
+  color: white;
+
+  transition: color .3s ease, background .3s ease;
+
+  padding: 10px 25px;
+}
+
+.scrolled {
+  background: white;
+  color: #000c89;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
+
+/* ---------- DESKTOP ---------- */
+
+.desktopHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+.title {
+  margin: 0;
+  margin-right: 35px;
+  font-size: 40px;
+  font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;
+  font-weight: 100;
+  white-space: nowrap;
+}
+
+
+.spacer {
+  flex: 1;
+}
+
+.authList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+}
+
+.saludoRegular {
+  display: flex;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  padding: 20px;
+}
+
+.link,
+.iconScrolled {
+  transition: 0.5s;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  margin-left: 15px;
+}
+
+.link {
+  color: white;
+}
+
+.iconScrolled {
+  color: #000c89;
+}
+
+.link:hover,
+.iconScrolled:hover {
+  opacity: .6;
+}
+
+.loginLink,
+.loginScrolled {
+  text-decoration: none;
+  font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;
+  font-weight: 600;
+  padding: .7rem 1.3rem;
+  transition: .3s;
+}
+
+.loginLink {
+  color: white;
+}
+
+.loginScrolled {
+  color: #000c89;
+}
+
+.btnLogout,
+.logOutScrolled {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: .3s;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.btnLogout {
+  color: white;
+    margin-left: 0;
+}
+
+.logOutScrolled {
+  color: #000c89;
+  margin-left: 0;
+}
+
+.btnPanelAdmin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: rgb(0, 195, 255);
+  margin-right: 20px;
+}
+
+
+@media (max-width:600px){
+
+  .desktopHeader{
+    display:none;
+  }
+
+  .mobileHeader{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .topBar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .bottomBar{
+    position:fixed;
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+
+    background:#081b35;
+  }
+
+  .title{
+    font-size:24px;
+    margin:0;
+  }
+
+  .link,
+  .iconScrolled{
+    width:40px;
+    height:40px;
+  }
+
+  .logOutScrolled{
+    color:white;
+  }
+
+}

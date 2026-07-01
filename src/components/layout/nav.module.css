@@ -1,3 +1,12 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
 
 .link {
   color: rgb(224, 224, 224);
@@ -46,11 +55,32 @@
   background: transparent;
   border: none;
 }
+
+.hamburger {
+  display: none;
+}
  
 @media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none; /* <- oculto */
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+    flex-direction: column;
+  }
+
+  .active {
+    display: flex; /* <- aparece al hacer click */
+  }
+
   .link {
-    padding: 10px;
-    margin-bottom: 0px;
-    font-size: 12px;
-  };
+    color: #000c89;
+  }
 }

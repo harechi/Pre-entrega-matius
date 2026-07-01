@@ -81,8 +81,6 @@ const Cart = () => {
 
                     <h3>{item.nombre}</h3>
 
-                    <p>{item.descripcion}</p>
-
                     <p>
                       Cantidad: {item.cantidad}
                     </p>

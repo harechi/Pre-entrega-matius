@@ -52,6 +52,7 @@
 
 .info p {
   color: #555;
+  display: none;
 }
 
 .priceContainer {
@@ -61,14 +62,16 @@
 }
 
 .price {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
 
-  font-weight: bold;
+  font-weight: 300;
 
   color: #00a650;
 }
 
 .summary {
+
   background-color: white;
 
   border-radius: 12px;
@@ -129,7 +132,7 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 15px;
   font-weight: bold;
   transition: all 0.2s ease;
 }
@@ -138,8 +141,9 @@
 .quantityValue {
   min-width: 30px;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .iconPapelera {
@@ -160,4 +164,60 @@
 .iconPapelera:hover{
   transition: 0.2s;
   color: #3483fa;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 80px auto;
+    margin-top: 140px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+  background-color: white;
+
+  border-radius: 12px;
+
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  .image {
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+  }
+  .info p {
+  display: none;
+  }
+
+  .info h3{
+    font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100 ;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .removeButton{
+    margin-bottom: 0px;
+  }
+
+  .quantityContainer {
+    display: flex;
+
+  }
 }

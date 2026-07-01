@@ -1,7 +1,8 @@
-import styles from "../../styles/home.module.css"
+import styles from "./home.module.css"
 import Carrusel from "../Carrusel"
 import { Link } from "react-router-dom";
 const Home = () => {
+
   return (
     
 
@@ -12,7 +13,10 @@ const Home = () => {
         encuentra lo que necesitas
        </h1>
       <h3>Contamos con una amplia selección de chistes</h3>
-      <Link to="/productos" className={styles.button}>
+      <Link to="/productos" 
+        className={styles.button}
+        title="Explorar productos"
+      >
         Explorar
       </Link>
       <Carrusel className={styles.carrusel} />

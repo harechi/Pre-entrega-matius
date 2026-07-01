@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const auth = getAuth();
 
-    const singup = (email, password) => {
+    const signup = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
         return () => unsubscribe();
     }, [auth]);
 
-    const value = { user, loading, singup, login, logout };
+    const value = { user, loading, signup, login, logout };
 
     return (
         <AuthContext.Provider value={value}>

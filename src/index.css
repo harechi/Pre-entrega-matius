@@ -4,8 +4,10 @@ body {
   box-sizing: border-box;
   background: linear-gradient(
   to bottom,
-  #000f22,
-  #4ea5ff,
-  white
+  #000f22 5%,
+  #4ea5ff 40%,
+  white 100%
 );
+ background-repeat: no-repeat;
+
 }

@@ -1,9 +1,12 @@
 import { useState } from "react";
-
+import { useCategoria } from "../../context/CategoriaContext";
 import styles from "./categorias.module.css"
 
 const Categorias = ({scrolled}) => {
   const [abierto, setAbierto] = useState(false);
+
+  const { setCategoria } = useCategoria();
+
 
   return (
     <div className={styles.contenedorCategorias}
@@ -16,9 +19,18 @@ const Categorias = ({scrolled}) => {
 
       {abierto && (
         <div className={styles.menu}>
-          <p>perfumes</p>
-          <p>ejercicio</p>
-          <p>refrescos</p>
+          <p onClick={() => setCategoria("perfumes")}>
+            Perfumes
+          </p>
+
+          <p onClick={() => setCategoria("ejercicio")}>
+            Ejercicio
+          </p>
+
+          <p onClick={() => setCategoria("refrescos")}>
+            Refrescos
+          </p>
+
         </div>
       )}
     </div>

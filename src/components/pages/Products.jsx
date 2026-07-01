@@ -1,4 +1,4 @@
-import ItemListContainer from "../ItemListContainer";
+import ItemListContainer from "../item/ItemListContainer";
 import styles from "./products.module.css";
 
 const Products = () => {

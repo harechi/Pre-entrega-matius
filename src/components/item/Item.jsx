@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
-import { CartContext } from "../context/CartContext";
-import IconoBoton from "../assets/icons/IconoBoton"
+import { CartContext } from "../../context/CartContext";
+import IconoBoton from "../../assets/icons/IconoBoton"
 
-import styles from "../styles/item.module.css";
+import styles from "./item.module.css";
 
 const Item = ({ producto }) => {
 
