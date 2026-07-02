@@ -3,131 +3,98 @@ import { collection, query, orderBy, limit, getDocs, startAfter, getCountFromSer
 import { db } from "../firebase/config";
 
 
-export const usePaginacion = (nombreColeccion, campoOrden = "nombre", itemsPorPagina = 10, categoria= "") => {
+export const usePaginacion = (
+  nombreColeccion,
+  campoOrden = "nombre",
+  itemsPorPagina = 10,
+  categoria = ""
+) => {
+
   const [data, setData] = useState([]);
   const [paginaActual, setPaginaActual] = useState(1);
-  const [historialDocs, setHistorialDocs] = useState([null]);
   const [totalPaginas, setTotalPaginas] = useState(0);
   const [cargando, setCargando] = useState(false);
-
+  const [lastDoc, setLastDoc] = useState(null);
 
   const obtenerTotal = async () => {
     try {
-      let consultaTotal;
+      let consultaTotal = collection(db, nombreColeccion);
 
       if (categoria) {
         consultaTotal = query(
-        collection(db, nombreColeccion),
-        where("categoria", "==", categoria)
-      );
-      } else {
-        consultaTotal = collection(db, nombreColeccion);
+          consultaTotal,
+          where("categoria", "==", categoria)
+        );
       }
 
       const snapshot = await getCountFromServer(consultaTotal);
 
-      setTotalPaginas(Math.ceil(snapshot.data().count / itemsPorPagina));
+      setTotalPaginas(
+        Math.ceil(snapshot.data().count / itemsPorPagina)
+      );
     } catch (error) {
       console.error("Error al obtener total:", error);
     }
   };
 
- const cargarPagina = async (numeroPagina) => {
-  setCargando(true);
-  
-  try {
-    console.log("Categoría:", categoria);
-    console.log("Página:", numeroPagina);
-    let consulta;
+  const cargarPagina = async (numeroPagina) => {
+    setCargando(true);
 
-    if (numeroPagina === 1) {
+    try {
+      let base = collection(db, nombreColeccion);
 
       if (categoria) {
-        consulta = query(
-        collection(db, nombreColeccion),
-        where("categoria", "==", categoria),
-        orderBy(campoOrden),
-        limit(itemsPorPagina)
-      );
-      } else {
-        consulta = query(
-        collection(db, nombreColeccion),
-        orderBy(campoOrden),
-        limit(itemsPorPagina)
-     );
-    }
-
-    } else {
-
-      const documentoAnterior = historialDocs[numeroPagina - 1];
-      
-      if (categoria) {
-        consulta = query(
-          collection(db, nombreColeccion),
-          where("categoria", "==", categoria),
-          orderBy(campoOrden),
-          startAfter(documentoAnterior),
-          limit(itemsPorPagina)
+        base = query(
+          base,
+          where("categoria", "==", categoria)
         );
+      }
+
+      base = query(base, orderBy(campoOrden));
+
+      let consulta;
+
+      if (numeroPagina === 1) {
+        consulta = query(base, limit(itemsPorPagina));
       } else {
         consulta = query(
-          collection(db, nombreColeccion),
-          orderBy(campoOrden),
-          startAfter(documentoAnterior),
+          base,
+          startAfter(lastDoc),
           limit(itemsPorPagina)
         );
       }
+
+      const snapshot = await getDocs(consulta);
+
+      const items = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+
+      setData(items);
+      setPaginaActual(numeroPagina);
+
+      setLastDoc(snapshot.docs[snapshot.docs.length - 1] || null);
+
+    } catch (error) {
+      console.error("Error al cargar página:", error);
+    } finally {
+      setCargando(false);
     }
-
-
-    const snapshot = await getDocs(consulta);
-    console.log("Cantidad de documentos:", snapshot.docs.length);
-    console.log(snapshot.docs);
-
-    const items = snapshot.docs.map(doc => ({ 
-      id: doc.id, 
-      ...doc.data() 
-    }));
-
-    console.log("Items:", items);
-
-  
-    setData(items);
-    setPaginaActual(numeroPagina);
-
-    if (!historialDocs[numeroPagina] && snapshot.docs.length > 0) {
-      const ultimoDocumento = snapshot.docs[snapshot.docs.length - 1];
-  
-      const nuevoHistorial = [...historialDocs];
-      nuevoHistorial[numeroPagina] = ultimoDocumento;
-      setHistorialDocs(nuevoHistorial);
-    }
-
-  } catch (error) {
-    console.error("Error al cargar página:", error);
-  } finally {
-    setCargando(false);
-  }
-};
+  };
 
   useEffect(() => {
-    setHistorialDocs([null]);
     setPaginaActual(1);
+    setLastDoc(null);
     obtenerTotal();
     cargarPagina(1);
-  }, [nombreColeccion, categoria]);
-
-  const refrescarPagina = () => {
-    obtenerTotal();
-    cargarPagina(paginaActual);
-  };
+  }, [categoria, nombreColeccion]);
 
   return {
     data,
     cargando,
     paginaActual,
     totalPaginas,
-    cargarPagina,
-    refrescarPagina
+    cargarPagina
   };
 };

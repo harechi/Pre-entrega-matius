@@ -6,13 +6,20 @@ import { db } from "../../firebase/config";
 
 import ItemList from './ItemList';
 import { useProductos } from '../../context/ProductsContext'; 
-import { useCategoria } from '../../context/CategoriaContext'; 
+import { useParams } from "react-router-dom";
 import Paginacion from '../Paginacion'
-
-
+import { usePaginacion } from "../../hooks/usePaginacion";
 
 const ItemListContainer = () => {
-  const { productos, cargando, paginaActual, totalPaginas, cargarPagina } = useProductos();
+  const { categoria } = useParams();
+
+  const {
+    data: productos,
+    cargando,
+    paginaActual,
+    totalPaginas,
+    cargarPagina
+  } = usePaginacion("productos", "nombre", 10, categoria || "");
 
   if (cargando && productos.length === 0) {
     return (
@@ -23,21 +30,14 @@ const ItemListContainer = () => {
     );
   }
 
-  const { categoria } = useCategoria();
-
-    const productosFiltrados = categoria
-  ? productos.filter(p => p.categoria === categoria)
-  : productos;
-
   return (
     <main className={styles.contenedor}>
       <header className={styles.encabezado}>
         <h1 className={styles.titulo}>Nuestros Productos</h1>
       </header>
 
-      <ItemList productos={productosFiltrados} />
+      <ItemList productos={productos} />
 
-      {/* Paginación limpia y reutilizable */}
       <Paginacion 
         paginaActual={paginaActual}
         totalPaginas={totalPaginas}

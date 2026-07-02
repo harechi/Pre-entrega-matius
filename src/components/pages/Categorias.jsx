@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useCategoria } from "../../context/CategoriaContext";
+import { useNavigate } from "react-router-dom";
 import styles from "./categorias.module.css"
 
 const Categorias = ({scrolled}) => {
   const [abierto, setAbierto] = useState(false);
 
-  const { setCategoria } = useCategoria();
+  const navigate = useNavigate();
 
 
   return (
@@ -19,15 +19,15 @@ const Categorias = ({scrolled}) => {
 
       {abierto && (
         <div className={styles.menu}>
-          <p onClick={() => setCategoria("perfumes")}>
+          <p onClick={() => navigate("/productos/perfumes")}>
             Perfumes
           </p>
 
-          <p onClick={() => setCategoria("ejercicio")}>
+          <p onClick={() => navigate("/productos/ejercicio")}>
             Ejercicio
           </p>
 
-          <p onClick={() => setCategoria("refrescos")}>
+          <p onClick={() => navigate("/productos/refrescos")}>
             Refrescos
           </p>
 

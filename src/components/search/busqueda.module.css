@@ -20,6 +20,11 @@
   z-index: 2;
 }
 
+.searchInput::-webkit-search-cancel-button {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
 .searchIcon {
   width: 16px;
   height: 16px;

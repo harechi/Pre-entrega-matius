@@ -8,37 +8,27 @@ export const ProductosContext = createContext();
 
 export const ProductosProvider = ({ children }) => {
 
-  const { categoria } = useCategoria();
-
-  const { 
-    data: productos, 
-    cargando, 
-    paginaActual, 
-    totalPaginas, 
-    cargarPagina, 
-    refrescarPagina 
-  } = usePaginacion("productos", "nombre", 10, categoria);
   const agregarProducto = async (nuevoProd) => {
     await addDoc(collection(db, "productos"), nuevoProd);
-    refrescarPagina(); 
   };
 
   const eliminarProducto = async (id) => {
     await deleteDoc(doc(db, "productos", id));
-    refrescarPagina();
   };
 
   const editarProducto = async (id, datosActualizados) => {
     const ref = doc(db, "productos", id);
     await updateDoc(ref, datosActualizados);
-    refrescarPagina();
   };
 
   return (
-    <ProductosContext.Provider value={{ 
-      productos, cargando, paginaActual, totalPaginas, 
-      cargarPagina, eliminarProducto, agregarProducto, editarProducto 
-    }}>
+    <ProductosContext.Provider
+      value={{
+        agregarProducto,
+        eliminarProducto,
+        editarProducto
+      }}
+    >
       {children}
     </ProductosContext.Provider>
   );

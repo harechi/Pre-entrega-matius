@@ -17,13 +17,17 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/productos" element={<Productos />} />
+          <Route path="/productos/:categoria" element={<Productos />} />
+
           <Route path="/producto/:id" element={<ProductoDetalle />} />
+
           <Route path="/carrito" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
-          <Route path="/dashboard" element={<Dashboard /> }/>
-          <Route path="/busqueda" element={<ResultadosBusqueda /> }/>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/busqueda" element={<ResultadosBusqueda />} />
         </Routes>
       </Layout>
   );

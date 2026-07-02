@@ -65,7 +65,6 @@ const Header = () => {
    <header
   className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
 >
-  {/* ESCRITORIO */}
   <div className={styles.desktopHeader}>
     <h1 className={styles.title}>NovaMarket</h1>
 

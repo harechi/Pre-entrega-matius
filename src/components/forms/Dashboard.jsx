@@ -3,6 +3,7 @@ import FormContainer from "./FormContainer";
 import { useProductos } from "../../context/ProductsContext";
 import styles from "./dashboard.module.css";
 import Paginacion from '../Paginacion'
+import { usePaginacion } from "../../hooks/usePaginacion";
 
 import TrashIcon from "../../assets/icons/PapeleraIcon";
 import EditIcon from "../../assets/icons/Config";
@@ -10,11 +11,17 @@ import EditIcon from "../../assets/icons/Config";
 const Dashboard = () => {
   
   
-  const { productos, eliminarProducto } = useProductos();
+  const { eliminarProducto } = useProductos();
   const [productoEditando, setProductoEditando] = useState(null);
   const [modalAbierto, setModalAbierto] = useState(false);
   
-  const { cargando, paginaActual, totalPaginas, cargarPagina } = useProductos();
+  const {
+  data: productos,
+  cargando,
+  paginaActual,
+  totalPaginas,
+  cargarPagina
+  } = usePaginacion("productos", "nombre", 10);
 
   if (cargando && productos.length === 0) {
     return (
