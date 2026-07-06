@@ -50,7 +50,7 @@ console.log("Productos:", productos);
 
   return (
       <div className={styles.container}>
-      <h2 className={styles.titulo}>Productos Encontrados</h2>
+      <h2 className={styles.titulo}>Resultados Encontrados:</h2>
       <div className={styles.grid}>
         {productosFiltrados.length > 0 ? (
             productosFiltrados.map((producto) => (

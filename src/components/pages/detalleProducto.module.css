@@ -163,6 +163,10 @@
     margin-bottom: 0px;
   }
 
+  .imagenContainer img:hover {
+  transform: none;
+  }
+
   .infoContainer h1 {
     font-size: 1.8rem;
     text-align: center;

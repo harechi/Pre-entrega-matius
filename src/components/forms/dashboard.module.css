@@ -2,6 +2,7 @@
     margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   background: linear-gradient(
   to bottom,
   #000f22 5%,
@@ -11,9 +12,11 @@
  background-repeat: no-repeat;
 
 }
+
+
 .container {
-  min-height: 100vh;
-  width: 80%;
+  min-height: 100%;
+  width: 100%;
   color: var(--clr-text);
   padding: 3rem clamp(1.5rem, 5vw, 4rem);
   font-family: 'Inter', system-ui, sans-serif;
@@ -51,6 +54,7 @@
   cursor: pointer;
   white-space: nowrap;
   transition: opacity 0.2s ease, transform 0.15s ease;
+  margin-right: 160px;
 }
 
 .btnNuevo:hover  { opacity: 0.85; }
@@ -69,6 +73,7 @@
   padding: 1rem;
   border-radius: 15px;
 }
+
 
 .modal {
   position: relative;
@@ -200,6 +205,7 @@
   display: flex;
   gap: 0.4rem;
   flex-shrink: 0;
+  margin-right: 160px;
 }
 
 /* Base compartida para botones de acción */

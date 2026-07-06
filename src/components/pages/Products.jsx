@@ -7,7 +7,7 @@ const Products = () => {
 
   return (
     <div className={styles.div}>
-      <h2>Productos</h2>
+      <h2 className={styles.titulo}>Nuestros Productos</h2>
       <ItemListContainer categoria={categoria || ""} />
     </div>
   );

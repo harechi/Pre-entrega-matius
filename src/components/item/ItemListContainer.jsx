@@ -33,7 +33,6 @@ const ItemListContainer = () => {
   return (
     <main className={styles.contenedor}>
       <header className={styles.encabezado}>
-        <h1 className={styles.titulo}>Nuestros Productos</h1>
       </header>
 
       <ItemList productos={productos} />

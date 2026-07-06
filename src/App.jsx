@@ -23,6 +23,15 @@ function App() {
 
           <Route path="/producto/:id" element={<ProductoDetalle />} />
 
+          <Route 
+            path="/dashboard" 
+            element={
+              <RutasProtegidas rolesPermitidos={["admin"]}>
+                <Dashboard />
+              </RutasProtegidas>
+            } 
+          />
+
           <Route path="/carrito" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />

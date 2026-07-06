@@ -15,7 +15,6 @@ const ESTADO_INICIAL = {
   slug: "",
 };
 
-// productoEditar: si viene con datos → modo editar, si es null → modo agregar
 const FormContainer = ({ cerrarModal, productoEditar = null }) => {
   
   const { editarProducto } = useProductos();
@@ -26,7 +25,6 @@ const FormContainer = ({ cerrarModal, productoEditar = null }) => {
 
   const modo = productoEditar ? "editar" : "agregar";
 
-  // aca pre-llenamos el formulario si venimos en modo editar
   useEffect(() => {
     if (productoEditar) {
       setDatosForm({
@@ -47,12 +45,10 @@ const FormContainer = ({ cerrarModal, productoEditar = null }) => {
   const manejarCambioImagen = (e) => {
     const archivo = e.target.files[0];
     setImagenFile(archivo ?? null);
-    // Actualiza el nombre visible en el file input
     const label = document.getElementById("file-name");
     if (label) label.textContent = archivo ? archivo.name : "Sin archivo seleccionado";
   };
 
-  // Sube la imagen a ImgBB y devuelve la URL, o null si falla
   const subirImagen = async (archivo) => {
     const form = new FormData();
     form.append("image", archivo);
@@ -71,7 +67,6 @@ const FormContainer = ({ cerrarModal, productoEditar = null }) => {
     setCargando(true);
 
     try {
-      // Esta parte es cuando el modo esta en agregar producto
       if (modo === "agregar") {
         if (!imagenFile) {
           alert("Por favor, sube una imagen");
@@ -89,14 +84,13 @@ const FormContainer = ({ cerrarModal, productoEditar = null }) => {
           stock:  Number(datosForm.stock),
         };
 
-        await addDoc(collection(db, "productos-nacionales"), productoNuevo);
+        await addDoc(collection(db, "productos"), productoNuevo);
         alert("¡Producto agregado!");
         setDatosForm(ESTADO_INICIAL);
         setImagenFile(null);
 
-      // si no entramos aca en modo editar 
       } else {
-        let urlImagen = productoEditar.imagen; // mantiene la imagen actual por defecto
+        let urlImagen = productoEditar.imagen; 
 
         if (imagenFile) {
           const nueva = await subirImagen(imagenFile);

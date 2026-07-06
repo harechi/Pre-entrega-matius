@@ -200,9 +200,12 @@
   .card {
     border-radius: 3px;
   }
-
   .card:hover {
-  transform: scale(1.01);
+    transform: none;
+    box-shadow: none;
+  }
+  .card:active {
+  transform: scale(0.985);
   }
 
   .textoBoton {

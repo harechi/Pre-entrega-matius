@@ -1,14 +1,12 @@
 import styles from "./formProducto.module.css";
 
 const CATEGORIAS = [
-  "refrescos",
   "perfumes",
+  "accesorios",
+  "refrescos",
   "ejercicio",
-  "fotografía",
   "electrónica",
   "computación",
-  "accesorios",
-  "video",
   "otros",
 ];
 
@@ -28,7 +26,7 @@ const FormProducto = ({ datosForm, manejarCambio, manejarEnvio, manejarCambioIma
             name="nombre"
             value={datosForm.nombre}
             onChange={manejarCambio}
-            placeholder="Ej. Cámara Nikon Z6"
+            placeholder="Ej. Tostadora AMD G530"
             required
           />
         </div>

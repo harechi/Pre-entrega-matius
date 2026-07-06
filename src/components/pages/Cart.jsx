@@ -60,7 +60,7 @@ const Cart = () => {
         {
           cart.length === 0
             ? (
-              <p>El carrito está vacío</p>
+              <p className={styles.vacio}>El carrito está vacío.</p>
             )
             : (
               

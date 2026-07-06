@@ -21,7 +21,7 @@
   box-shadow: 0 2px 10px rgba(0,0,0,.3);
 }
 
-/* ---------- DESKTOP ---------- */
+/* version de escritorio*/
 
 .desktopHeader {
   display: flex;
@@ -194,4 +194,8 @@
     color:white;
   }
 
+
+  .scrolled .saludoRegular{
+    color:#ffffff;
+  }
 }

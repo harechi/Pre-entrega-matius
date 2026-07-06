@@ -69,21 +69,29 @@
 @media (max-width: 600px) {
   .hamburger {
     display: block;
+    border: none;
+    background: transparent;
+    color:white;
+    font-size: 24px;
   }
 
   .menu {
-    display: none; /* <- oculto */
-    position: fixed;
-    bottom: 60px;
-    left: 0;
-    width: 100%;
-    background: white;
-    z-index: 9999;
-    flex-direction: column;
+    display:none;
+    position:fixed;
+    bottom:60px;
+    left:0;
+    width:100%;
+
+    background:white;
+
+    flex-direction:column;
+    align-items:flex-start;  
+    gap:0;                    
+    padding:20px;
   }
 
   .active {
-    display: flex; /* <- aparece al hacer click */
+    display: flex; 
   }
 
   .link {

@@ -170,6 +170,18 @@ const Header = () => {
               </span>
             </li>
 
+             {user?.rol === "admin" && (
+                <li>
+                  <Link
+                    to="/dashboard"
+                    className={styles.btnPanelAdmin}
+                    title="Panel de administración"
+                  >
+                    <Config />
+                  </Link>
+                </li>
+            )}
+
             <li>
               <button
                 onClick={logout}

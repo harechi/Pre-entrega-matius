@@ -121,7 +121,7 @@ const Dashboard = () => {
           ))}
         </ul>
       </div>
-       <Paginacion 
+       <Paginacion className={styles.paginacion}
         paginaActual={paginaActual}
         totalPaginas={totalPaginas}
         cargarPagina={cargarPagina}

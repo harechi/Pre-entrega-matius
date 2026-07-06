@@ -43,7 +43,6 @@ const CartProvider = ({ children }) => {
     return cart.reduce((acum, item) => acum + item.cantidad, 0);
   };
 
-  // Obtener el precio total de la compra
   const obtenerTotalPrecio = () => {
     return cart.reduce((acum, item) => acum + item.precio * item.cantidad, 0);
   };

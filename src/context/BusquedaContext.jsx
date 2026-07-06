@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-// creamos el contexto de busqueda
+
 const BusquedaContext = createContext();
 
 export const BusquedaProvider = ({ children }) => {

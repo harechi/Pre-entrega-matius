@@ -9,6 +9,7 @@
   
   gap: 30px;
   margin-top: 140px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .products {
@@ -31,6 +32,12 @@
   gap: 20px;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.vacio {
+  color: rgb(216, 245, 255);
+  text-align: center;
+  font-size: 15px;
 }
 
 .image {
@@ -171,7 +178,7 @@
     width: 90%;
     margin: 80px auto;
     margin-top: 140px;
-
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
   }
@@ -185,6 +192,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   gap: 20px;
 
@@ -210,6 +218,11 @@
 
   .price {
     font-size: 15px;
+  }
+
+  .priceContainer {
+    min-width: auto;
+    text-align: center;
   }
 
   .removeButton{

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext"; // Usamos tu contexto central
-import { doc, setDoc } from "firebase/firestore"; // Importamos para grabar en Firestore
-import { db } from "../../firebase/config"; // Tu configuración de Firebase
+import { useAuth } from "../../context/AuthContext"; 
+import { doc, setDoc } from "firebase/firestore"; 
+import { db } from "../../firebase/config"; 
 import styles from "./authForm.module.css";
 
 const Registro = () => {
-  const [nombre, setNombre] = useState(""); // Agregamos campo de nombre
+  const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   
-  const { signup } = useAuth(); // Traemos la función de registro del contexto
+  const { signup } = useAuth(); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -57,7 +57,7 @@ const Registro = () => {
             <input
               className={styles.input}
               type="text"
-              placeholder="Juan Pérez"
+              placeholder="Mari Kong"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
               required
@@ -84,7 +84,7 @@ const Registro = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              placeholder="Mínimo 6 caracteres"
+              placeholder="Mínimo 8 caracteres"
             />
           </div>
 
