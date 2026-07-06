@@ -1,4 +1,4 @@
-import styles from './Paginacion.module.css';
+import styles from './paginacion.module.css';
 
 const Paginacion = ({ paginaActual, totalPaginas, cargarPagina, cargando }) => {
   const maxBotones = 5;
